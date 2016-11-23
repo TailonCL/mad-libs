@@ -4,6 +4,16 @@
   <title>Mad Libs</title>
   <meta charset="utf-8">
   <script src='mad.js'></script>
+  <style>
+  #dev {
+    width: 100%;
+    background-color: maroon;
+    color: white;
+  }
+  #block {
+    display: inline-block;
+  }
+  </style>
 </head>
 <body>
   <h2>Es la hora de Mad Libs!</h2>
@@ -15,7 +25,15 @@
   <p>Para iniciar, haz click abajo</p>
   <button type="button" onclick="madlibs()">A JUGAR</button>
   <h1 style="font: Tahoma" id="story"></h1>
-
-
+  <br>
+  <br>
+  <br>
+  <div id="dev">
+    <h3>Test Output</h3>
+  </div>
+  <h3>Array content:</h3>
+  <p id="debug0"></p>
+  <h3>String content:</h3>
+  <p id="debug1"></p>
 </body>
 </html>

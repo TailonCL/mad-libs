@@ -27,7 +27,7 @@ var adv = [
 var advModo = [
   // adverbios de modo
    'bien', 'mal', 'de buena manera', 'de mala manera',
-   'fácilmente', 'justamente', 'espectacularmente'
+   'fácilmente', 'espectacularmente'
 ];
 
 var advInt = [
@@ -43,25 +43,30 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+
+
 var madlibs = function() {
-  var oracion = [];
+  oracion = [];
   var userSust = window.prompt('Escribe un sustantivo \
   (es decir el nombre de un objeto o cosa).');
   var userArt = window.prompt('Ahora escribe el artículo para ese \
-   sustantivo (por ejemplo: El, La, Los, Las, Unos, Unas, etc)');
+  sustantivo (por ejemplo: El, La, Los, Las, Unos, Unas, etc)');
   var userAdj = window.prompt('Dame un adjetivo para tu objeto \
   (una caracteristica, por ejemplo: audaz, tonto, malvado, bueno, etc)');
   var userVerb = window.prompt('Elige un verbo! (una accion)');
   // El input se agrega a un array
-  oracion.push(toLowerCase(userArt));
-  oracion.push(toLowerCase(userSust));
-  oracion.push(toLowerCase(userAdj));
-  oracion.push(toLowerCase(userVerb));
+  oracion.push(userArt);
+  oracion.push(userSust);
+  oracion.push(userAdj);
+  oracion.push(userVerb);
 // luego se agregan adverbios aleatorios
   oracion.push(advInt[randPick(advInt)]);
   oracion.push(advModo[randPick(advModo)]);
   // se crea un string con todo
-  var result = oracion.join(' ');
+  result = oracion.join(' ');
+  //debug section
+  document.getElementById('debug0').innerHTML = oracion;
+  document.getElementById('debug1').innerHTML = result;
 // finalmente se muestra al jugador
   document.getElementById('story').innerHTML = result;
 };
@@ -69,3 +74,8 @@ var madlibs = function() {
 var randPick = function(listado) {
   return getRandomInt(0, listado.length);
 };
+
+var printBugs = function () {
+  document.getElementById('debug0').innerHTML = oracion;
+  document.getElementById('debug1').innerHTML = result;
+}
