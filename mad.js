@@ -5,7 +5,7 @@ var userSust = [];
 var userAdj = []; */
 
 // colecciones predeterminadas
-var sust = {'el':'raton', 'la':'garra', 'la':'nave', 'la':'cobardía',
+/* var sust = {'el':'raton', 'la':'garra', 'la':'nave', 'la':'cobardía',
 'el':'bazuca', 'el':'cuaderno', 'la':'caja', 'el':'ventanal', 'unos':'ladrones',
 'las':'aves', 'unas':'cosas', 'una':'pata'};
 
@@ -22,7 +22,7 @@ var adv = [
  'antes', 'después', 'luego', 'despacio', 'aprisa', 'aun', 'todavía',
  'siempre', 'nunca', 'jamás'
 
-];
+]; */
 
 var advModo = [
   // adverbios de modo
@@ -60,7 +60,7 @@ var madlibs = function() {
 // luego se agregan adverbios aleatorios
   oracion.push(advInt[randPick(advInt)]);
   oracion.push(advModo[randPick(advModo)]);
-  // se crea un string
+  // se crea un string con todo
   var result = oracion.join(' ');
 // finalmente se muestra al jugador
   document.getElementById('story').innerHTML = result;
